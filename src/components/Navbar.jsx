@@ -12,7 +12,7 @@ function Navbar() {
     <nav className='navbar'>
       <div className='navbar-logo'>
         <img src={img}alt='WeMade Logo'/>
-        <span className='brand-text'>Thanishka Reddy Dandu</span>
+        <span className='brand-text'> Thanishka Reddy Dandu</span>
       </div>
       <div className='hamburger'onClick={toggleMenu}>&#9776;</div>
       <ul className={`navbar-links ${isMenuopen ? 'active' : ''}`}>
