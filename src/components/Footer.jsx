@@ -7,11 +7,12 @@ function Footer() {
   return (
     <footer className='footer-container'>
       <div className='footer-icons'>
-        <a href="https://linkedin.com/in/thanishka"><FaLinkedin/></a>
+        <a href="nkedin.com/in/thanishka-reddy-87b105398/"><FaLinkedin/></a>
         <a href='https://instagram.com'><FaInstagram/></a>
+        <a href='https://github.com/danduthanishkareddy'><FaGithub></FaGithub></a>
       </div>
       <p className='footer-text'>
-        ©{new Date().getFullYear()} All Rights Reserved by <strong>Thanishka Reddy</strong>
+        ©{new Date().getFullYear()} All Rights Reserved by <strong>Thanishka Reddy Dandu</strong>
       </p>
     </footer>
   );

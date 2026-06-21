@@ -29,8 +29,10 @@ function Home() {
       <div className='home-content'>
         <div className='text-section'>
           <h1>Hello, I'm <span className='highlight'>Thanishka Reddy</span></h1>
-          <h2>Full Stack Developer | React Enthusiast</h2>
-          <p>I build responsive and ineractive web applications using modern frontend technologies passionate about clean UI and great user experience.</p>
+          <h2>Final Year B.Tech Student | Aspiring Full Stack Developer</h2>
+          <p>
+            I am a final-year B.Tech student passionate about building modern, responsive, and user-friendly web applications. Skilled in React, JavaScript, HTML, CSS, Node.js, and SQL, I enjoy turning ideas into practical solutions through clean and efficient code. I am continuously learning new technologies and seeking opportunities to apply my skills, contribute to real-world projects, and grow as a software developer.
+          </p>
           <Link to="/resume" className='resume-button'>View Resume</Link>
         </div>
         <div className='image-section'>
