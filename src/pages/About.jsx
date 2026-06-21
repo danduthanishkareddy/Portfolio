@@ -31,7 +31,7 @@ function About(){
               <strong>🎂 Age:</strong> 20
             </div>
             <div className="info-item">
-              <strong>🌐 Website:</strong> <a href="thanishkareddy-portfolio.netlify.app">Check Here</a>
+              <strong>🌐 Website:</strong> <a href="https://danduthanishkareddy.github.io/Portfolio/">Check Here</a>
             </div>
             <div className="info-item">
               <strong>🎓 Degree:</strong> B.Tech Computer Science
