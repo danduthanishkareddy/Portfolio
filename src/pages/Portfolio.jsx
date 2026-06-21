@@ -46,26 +46,25 @@ function Portfolio() {
   ];
 
   return (
-    <section className="portfolio-section">
-      <h2 className="portfolio-title">Projects</h2>
-
-      <p className="portfolio-subtitle">
-        Here are some of the projects I have developed while learning Full Stack
-        Development and React.js.
+    <section className="portfolio-page">
+      <h2 className="portfolio-heading">Projects</h2>
+      <p className="portfolio-subheading">
+        Here are some of the projects I have developed while learning Full Stack Development and React.js.
       </p>
 
-      <div className="portfolio-container">
+      <div className="portfolio-grid">
         {projects.map((project, index) => (
-          <div className="portfolio-card" key={index}>
-            <h3>{project.title}</h3>
+          <div className="project-card" key={index}>
+            <div className="project-info">
+              <h4>{project.title}</h4>
+              <span>{project.tech}</span>
 
-            <p className="project-tech">{project.tech}</p>
-
-            <ul>
-              {project.points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
+              <ul>
+                {project.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
       </div>
