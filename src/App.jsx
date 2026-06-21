@@ -8,7 +8,7 @@ import Skills from "./pages/Skills";
 import Resume from "./pages/Resume";
 import Portfolio from "./pages/Portfolio";
 import Certificates from "./pages/Certificates";
-import Contact from "./pages/Contact"
+import Contact from "./pages/Contact";
 
 function App(){
   return(
