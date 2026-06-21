@@ -1,60 +1,75 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Portfolio.css";
 
-import aits1 from "../assets/aits1.jpeg";
-import aits2 from "../assets/aits2.jpeg";
-import aits3 from "../assets/aits3.jpeg";
-import aits4 from "../assets/aits4.jpeg";
-
-const projects = [
-  { id: 1, title: "AITS MAIN BUILDING", image: aits1, category: "AITS" },
-  { id: 2, title: "AITS CAMPUS VIEW", image: aits2, category: "AITS" },
-  { id: 3, title: "AITS ENTRANCE", image: aits3, category: "AITS" },
-  { id: 4, title: "AITS TRAINING AND PLACEMENT CELL", image: aits4, category: "AITS" },
-];
-
-const categories = ["All", "AITS"];
-
 function Portfolio() {
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filteredProjects =
-    activeCategory === "All"
-      ? projects
-      : projects.filter((project) => project.category === activeCategory);
+  const projects = [
+    {
+      title: "AI Chat Application",
+      tech: "React.js, Node.js, Express.js, CSS",
+      points: [
+        "Built a responsive AI chatbot interface",
+        "Implemented real-time chat functionality",
+        "Designed a clean and user-friendly UI",
+        "Connected frontend with backend services",
+      ],
+    },
+    {
+      title: "E-Commerce Website",
+      tech: "React.js, HTML, CSS",
+      points: [
+        "Developed product listing pages",
+        "Created responsive layouts for all devices",
+        "Implemented shopping cart UI",
+        "Improved user navigation and experience",
+      ],
+    },
+    {
+      title: "Weather App",
+      tech: "React.js, OpenWeather API, CSS",
+      points: [
+        "Fetched real-time weather data using API",
+        "Displayed temperature and weather conditions",
+        "Implemented city-based weather search",
+        "Built a responsive and modern interface",
+      ],
+    },
+    {
+      title: "Portfolio Website",
+      tech: "React.js, CSS, GitHub Pages",
+      points: [
+        "Showcased skills, projects, and certificates",
+        "Added downloadable resume section",
+        "Implemented responsive design",
+        "Deployed using GitHub Pages",
+      ],
+    },
+  ];
 
   return (
-    <div className="portfolio-page">
-      <h2 className="portfolio-heading">My Portfolio</h2>
+    <section className="portfolio-section">
+      <h2 className="portfolio-title">Projects</h2>
 
-      <p className="portfolio-subheading">
-        AITS Kadapa placement portal project screens and campus-related sections.
+      <p className="portfolio-subtitle">
+        Here are some of the projects I have developed while learning Full Stack
+        Development and React.js.
       </p>
 
-      <div className="portfolio-filters">
-        {categories.map((category) => (
-          <button
-            key={category}
-            className={`filter-btn ${activeCategory === category ? "active" : ""}`}
-            onClick={() => setActiveCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      <div className="portfolio-container">
+        {projects.map((project, index) => (
+          <div className="portfolio-card" key={index}>
+            <h3>{project.title}</h3>
 
-      <div className="portfolio-grid">
-        {filteredProjects.map((project) => (
-          <div className="project-card" key={project.id}>
-            <img src={project.image} alt={project.title} />
-            <div className="project-info">
-              <h4>{project.title}</h4>
-              <span>{project.category}</span>
-            </div>
+            <p className="project-tech">{project.tech}</p>
+
+            <ul>
+              {project.points.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
